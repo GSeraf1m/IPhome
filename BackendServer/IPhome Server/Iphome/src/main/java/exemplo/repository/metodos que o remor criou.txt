@@ -1,0 +1,8 @@
+SELECT * FROM receita r INNER JOIN avaliacao_comentario c ON r.id_receita = c.id_receita WHERE r.id_receita = 3;
+
+
+
+
+--  BUSCAR RECEITAS POR INGREDIENTES
+
+SELECT * FROM receita_ingrediente ri INNER JOIN receita r ON r.id_receita = ri.id_receita WHERE ri.id_ingrediente=2 OR ri.id_ingrediente=18;

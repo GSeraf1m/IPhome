@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">IPhome</string>
+    <string name="barra" />
+    <string name="logincaps">LOGIN</string>
+    <string name="cadastrarcaps">CADASTRAR</string>
+    <string name="appnamecaps">IPHOME</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="loginlower">Login</string>
+    <string name="username">Username</string>
+    <string name="senha">Senha</string>
+    <string name="emailLower">E-mail</string>
+    <string name="novidades">Eu desejo receber novidades por e-mail</string>
+    <string name="ic_user">Icon made by Smashicons from www.flaticon.com </string>
+    <string name="selecioneingredientes">Selecione os ingredientes:</string>
+    <string name="Categorias">Alcool,Bebidas,Biscoitos,Carnes,Doces e Chocolates,Farinhas e Cereais,Frios e Embutidos,Frutas,Laticinios,Massas,Molhos,Oleo Vegetal,Origem Animal,Pães,Vegetais</string>
+    <string name="buscarreceita">Buscar Receita</string>
+</resources>

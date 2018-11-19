@@ -1,0 +1,43 @@
+//RECEITA COMO RECEITA
+
+{
+    
+"idComentario": 1,
+    
+"texto": "dkfjdjfdjfhdhfjdfh",
+    
+"data": "23/03/2010",
+    
+"nota": 5,
+    
+"usuario": {"idUsuario": 1,"email": "mopo@gmail.cndm","nomeUsuario": "mosdsnhdd","senha": "senhnad1","fotoUsuario": "aaadnafaoaaaaaaaaaaaaaaaaaa","receitasFavoritos": null,"ingredienteFavoritos": []},
+   
+"receita": {"idReceita": 1,"nomeReceita": "Estrogonofe de Frango","descricaoReceita": "(3) Peito de frango cortado em cubos;(1) Cebola picada;(1) Dente de alho picado;Molho de tomate;(1) Caixinha de creme de leite;Sal a gosto;-Em uma panela, doure a cebola e o alho e deixe o frango cozinhar-Depois de cozido, adicione o molho de tomate e o sal-Quando o molho come�ar a ferver, coloque o creme de leite e deixe o fogo ligado por tempo suficiente para somente misturar tudo-Sirva com arroz e batata palha","fotoReceita": "https://pixabay.com/photo-1407839/","listaIngredientes": []}
+
+}
+
+//RECEITA COMO LONG
+{
+    
+"idComentario": 1,
+    
+"texto": "dkfjdjfdjfhdhfjdfh",
+    
+"data": "23/03/2010",
+    
+"nota": 5,
+    
+"usuario": {"idUsuario": 1,"email": "mopo@gmail.cndm","nomeUsuario": "mosdsnhdd","senha": "senhnad1","fotoUsuario": "aaadnafaoaaaaaaaaaaaaaaaaaa","receitasFavoritos": null,"ingredienteFavoritos": []},
+   
+"idReceita":2
+
+}
+
+
+
+
+{
+"idUsuarioIngrediente": 5,
+"idIngrediente": 2,
+"idUsuario": {"idUsuario": 2,"email": "asd","nomeUsuario": "etiely","senha": "321","fotoUsuario": "manda"}
+}
