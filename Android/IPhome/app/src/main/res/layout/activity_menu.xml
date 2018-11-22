@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MenuActivity">
+    android:background="@color/fundoAmarelo"
+    tools:context=".Activity.MenuActivity">
 
     <ImageView
         android:id="@+id/iv_barracadastro"
@@ -25,7 +26,7 @@
 
     <TextView
         android:id="@+id/tv_titulomenu"
-        android:layout_width="337dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="4dp"
@@ -35,7 +36,8 @@
         android:fontFamily="Montserrat"
         android:lineSpacingMultiplier="1.3"
         android:text="@string/appnamecaps"
-        android:textColor="#FFBD1111"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
         android:textSize="90sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -51,6 +53,8 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:text="@string/logincaps"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/fundoAmarelo"
         app:layout_constraintBottom_toTopOf="@+id/bt_cadastrarmenu"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -64,6 +68,8 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="250dp"
         android:text="@string/cadastrarcaps"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/fundoAmarelo"
         app:layout_constraintBottom_toTopOf="@+id/iv_barracadastro"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

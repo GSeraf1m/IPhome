@@ -14,4 +14,11 @@
     <string name="selecioneingredientes">Selecione os ingredientes:</string>
     <string name="Categorias">Alcool,Bebidas,Biscoitos,Carnes,Doces e Chocolates,Farinhas e Cereais,Frios e Embutidos,Frutas,Laticinios,Massas,Molhos,Oleo Vegetal,Origem Animal,Pães,Vegetais</string>
     <string name="buscarreceita">Buscar Receita</string>
+    <string name="atualizar">Atualizar conta</string>
+    <string name="IconeFem">Ícone Feminino</string>
+    <string name="IconeMasc">Ícone Masculino</string>
+    <string name="IconeAnimal">Ícone Animalzinho</string>
+    <string name="Resultados">Resultados</string>
+    <string name="ReceitasFavoritas">Receitas Favoritas</string>
+    <string name="IP">"http://192.168.43.250:8080/"</string>
 </resources>

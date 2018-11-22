@@ -4,61 +4,44 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CadastrarActivity">
+    tools:context=".Activity.CadastrarActivity"
+    android:background="@color/fundoAmarelo">
 
-
-    <ImageView
-        android:id="@+id/iv_barracadastro"
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbarCadastro"
         android:layout_width="0dp"
-        android:layout_height="48dp"
-        android:background="@color/colorPrimary"
-        android:contentDescription="@string/barra"
-        android:visibility="visible"
+        android:layout_height="56dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/colorPrimaryDark"
+        android:theme="@style/AppTheme.AppBar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@color/colorPrimary"
-        tools:srcCompat="@color/colorPrimary" />
+        app:title="@string/cadastrarcaps"
+        app:titleTextColor="@color/fundoAmarelo" />
 
-    <TextView
-        android:id="@+id/tv_cadastrarcadastrar"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="8dp"
-        android:width="400dp"
-        android:height="122dp"
-        android:fontFamily="Montserrat"
-        android:lineSpacingMultiplier="1.3"
-        android:text="@string/cadastrarcaps"
-        android:textColor="#FFF"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="@+id/iv_barracadastro"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/iv_barracadastro" />
 
     <EditText
         android:id="@+id/et_usernamecadastro"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="46dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="8dp"
         android:ems="10"
         android:hint="@string/username"
+        android:textColorHint="@color/laranjaLetras"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iv_barracadastro"
-        app:layout_constraintVertical_bias="0.054"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@+id/toolbarCadastro"
+        app:layout_constraintVertical_bias="0.054" />
 
     <EditText
         android:id="@+id/et_emailcadastro"
@@ -70,14 +53,14 @@
         android:layout_marginBottom="8dp"
         android:ems="10"
         android:hint="@string/emailLower"
+        android:textColorHint="@color/laranjaLetras"
         android:inputType="textEmailAddress"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_usernamecadastro"
-        app:layout_constraintVertical_bias="0.0"
-        android:autofillHints="" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/et_senhacadastro"
@@ -89,6 +72,7 @@
         android:layout_marginBottom="8dp"
         android:ems="10"
         android:hint="@string/senha"
+        android:textColorHint="@color/laranjaLetras"
         android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -105,6 +89,8 @@
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="24dp"
         android:text="@string/cadastrarcaps"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/fundoAmarelo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -122,6 +108,7 @@
         android:layout_marginBottom="8dp"
         android:checked="true"
         android:text="@string/novidades"
+        android:textColor="@color/laranjaLetras"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

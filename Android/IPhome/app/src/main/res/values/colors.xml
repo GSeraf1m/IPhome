@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#BD1111</color>
-    <color name="colorPrimaryDark">#BD1111</color>
+    <color name="colorPrimary">#bd3636</color>
+    <color name="colorPrimaryDark">#BD3636</color>
     <color name="colorAccent">#47525E</color>
     <color name="outroCinza">#4E5C62</color>
     <color name="laranjaAmarelo">#FAB02B</color>
+    <color name="maisUmCinza">#7b7b7b</color>
+    <color name="fundoAmarelo">#F8D18A</color>
+    <color name="laranjaLetras">#CC5511</color>
 </resources>

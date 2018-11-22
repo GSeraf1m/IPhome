@@ -1,8 +1,10 @@
-package com.app.saintjimmy.iphome;
+package com.app.saintjimmy.iphome.Activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+
+import com.app.saintjimmy.iphome.R;
 
 public class ListaReceitaActivity extends AppCompatActivity {
 
