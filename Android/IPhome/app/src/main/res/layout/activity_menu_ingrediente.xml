@@ -31,7 +31,6 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="8dp"
         android:background="#FFFF"
         android:popupBackground="#FFFF"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -39,25 +38,24 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbarMenuIngrediente"
-        app:layout_constraintVertical_bias="0.105" />
+        app:layout_constraintVertical_bias="0.23" />
 
     <TextView
         android:id="@+id/tv_selecionar"
-        android:layout_width="wrap_content"
+        android:layout_width="319dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginBottom="244dp"
         android:text="@string/selecioneingredientes"
+        android:textAlignment="center"
         android:textColor="@color/laranjaLetras"
-        android:textSize="30sp"
+        android:textSize="26sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sp_favoritos"
-        app:layout_constraintVertical_bias="0.75" />
+        app:layout_constraintVertical_bias="0.2" />
 
     <Button
         android:id="@+id/bt_buscarreceita"
@@ -95,14 +93,14 @@
             android:orientation="vertical"
             android:stretchColumns="1">
 
-            <Spinner
-                android:id="@+id/sp_alcool"
+            <ExpandableListView
+                android:id="@+id/lv_alcool"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
                 android:background="#FFFF"
-                android:popupBackground="#FFFF"/>
+                android:popupBackground="#FFFF" />
 
             <Spinner
                 android:id="@+id/sp_bebidas"
@@ -128,7 +126,7 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:background="#FFFF"
-                android:popupBackground="#FFFF"/>
+                android:popupBackground="#FFFF" />
 
             <Spinner
                 android:id="@+id/sp_carnes"
@@ -158,7 +156,7 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:background="#FFFF"
-                android:popupBackground="#FFFF"/>
+                android:popupBackground="#FFFF" />
 
             <Spinner
                 android:id="@+id/sp_frios_embutidos"
@@ -178,7 +176,7 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:background="#FFFF"
-                android:popupBackground="#FFFF"/>
+                android:popupBackground="#FFFF" />
 
             <Spinner
                 android:id="@+id/sp_laticinios"
@@ -188,7 +186,7 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:background="#FFFF"
-                android:popupBackground="#FFFF"/>
+                android:popupBackground="#FFFF" />
 
             <Spinner
                 android:id="@+id/sp_massas"
@@ -228,7 +226,7 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:background="#FFFF"
-                android:popupBackground="#FFFF"/>
+                android:popupBackground="#FFFF" />
 
             <Spinner
                 android:id="@+id/sp_paes"
@@ -251,4 +249,15 @@
                 android:popupBackground="#FFFF" />
         </LinearLayout>
     </ScrollView>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Explicação"
+        android:textAlignment="center"
+        android:textColor="@color/fundoAmarelo"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="68dp" />
 </android.support.constraint.ConstraintLayout>

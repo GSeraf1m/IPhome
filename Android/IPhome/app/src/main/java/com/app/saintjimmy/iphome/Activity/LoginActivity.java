@@ -71,7 +71,7 @@ public class LoginActivity extends AppCompatActivity {
         ivBarraCadastro = findViewById(R.id.iv_barracadastro);
         btLogin = findViewById(R.id.bt_login);
         retrofit = new Retrofit.Builder()
-                .baseUrl("http://192.168.25.34:8080/")
+                .baseUrl(getResources().getString(R.string.IP))
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
         service = retrofit.create(UsuarioService.class);
