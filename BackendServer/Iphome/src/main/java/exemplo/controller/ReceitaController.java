@@ -1,11 +1,13 @@
 package exemplo.controller;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -73,5 +75,11 @@ public class ReceitaController {
 			return new ResponseEntity<Receita>(receita, HttpStatus.OK);
 		}		
 		return new ResponseEntity<Receita>(HttpStatus.NOT_FOUND);
+	}
+	@RequestMapping(value="listar/ingredientes", method = RequestMethod.POST)
+	public ResponseEntity<List<Receita>> listarTodasReceitaPorIdIngrediente(@RequestBody ArrayList<Long> ingredientes){
+		rDAO = new ReceitaDAO();
+		List<Receita> receitasProntas = rDAO.buscarTodosPorIdIngrediente(ingredientes);
+		return new ResponseEntity<List<Receita>>(receitasProntas,HttpStatus.OK);
 	}
 }

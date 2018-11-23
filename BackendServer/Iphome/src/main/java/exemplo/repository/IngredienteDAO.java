@@ -6,7 +6,10 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import exemplo.model.Comentario;
 import exemplo.model.Ingrediente;
+import exemplo.model.Receita;
+import exemplo.model.Usuario;
 
 
 
@@ -136,6 +139,30 @@ public class IngredienteDAO {
 									ingrediente.setNome(rs.getString("nome_ingrediente"));
 									ingrediente.setCategoria(rs.getString("categoria"));
 									listaIngredientes.add(ingrediente);
+								}
+							} catch (SQLException e) {
+								e.printStackTrace();
+							} finally {
+								this.conexao.fecharConexao();
+							}
+							return listaIngredientes;
+						}
+						
+						public List<Long> buscarTodosIdPorIdReceita(long idReceita) {
+							// ABRIR A CONEXÃƒO COM O BANCO
+							this.conexao.abrirConexao();
+							// SQL COM A OPERAÃ‡ÃƒO QUE DESEJA-SE REALIZAR
+							String sqlSelect = "SELECT * FROM receita_ingrediente WHERE id_receita=?;";
+							PreparedStatement statement;
+							List<Long> listaIngredientes = new ArrayList<Long>();
+							try {
+								statement = this.conexao.getConexao().prepareStatement(sqlSelect);
+								statement.setLong(1, idReceita);
+								ResultSet rs = statement.executeQuery();
+								
+								while(rs.next()) {
+									// Converter um objeto ResultSet em um objeto Usuario
+									listaIngredientes.add(rs.getLong("id_ingrediente"));
 								}
 							} catch (SQLException e) {
 								e.printStackTrace();

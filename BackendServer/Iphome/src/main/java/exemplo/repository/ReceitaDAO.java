@@ -6,6 +6,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import exemplo.model.Ingrediente;
 import exemplo.model.Receita;
 
 
@@ -237,7 +238,24 @@ public class ReceitaDAO {
 				 receitasCerto.add(receitasBruto.get(i));
 			 }
 		 }
-		 return receitasCerto;
+		ArrayList<Receita> receitasPronto = new ArrayList<Receita>();
+		for(int i=0;i<receitasCerto.size();i++){
+			IngredienteDAO iDAO = new IngredienteDAO();
+			List<Long> ingredientesReceita = iDAO.buscarTodosIdPorIdReceita(receitasCerto.get(i).getId());
+			int cont=0;
+			for(int j=0;j<ingredientes.size();j++){
+				for(int k=0;k<ingredientesReceita.size();k++){
+					if(ingredientes.get(j)==ingredientesReceita.get(k)){
+						cont++;
+					}
+				}
+			}
+			if(cont==ingredientes.size()){
+				receitasPronto.add(receitasCerto.get(i));
+			}
+		}
+		 
+		 return receitasPronto;
 		 }
 /*
 			// SELECT * FROM usuario WHERE login=? AND senha=?;

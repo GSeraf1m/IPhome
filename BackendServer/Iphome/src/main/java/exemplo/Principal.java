@@ -138,16 +138,16 @@ public class Principal {
 	
 	
 //---------------------------------------------------------------O MÉTODO------------------------------------------------------------------------
-//	 List<Receita> receitas = new ArrayList<Receita>();
-//	 ArrayList<Long> ingredientes = new ArrayList<Long>();
-//	 IngredienteDAO iDAO = new IngredienteDAO();
-//	 ReceitaDAO rDAO = new ReceitaDAO();
-//	 ingredientes.add(iDAO.buscarPorId(57).getId());
-//	 ingredientes.add(iDAO.buscarPorId(32).getId());
-//	 receitas = rDAO.buscarTodosPorIdIngrediente(ingredientes);
-//	 for(int i=0;i<receitas.size();i++) {
-//	  System.out.println(receitas.get(i).getNome());
-//	 }
+	 List<Receita> receitas = new ArrayList<Receita>();
+	 ArrayList<Long> ingredientes = new ArrayList<Long>();
+	 IngredienteDAO iDAO = new IngredienteDAO();
+	 ReceitaDAO rDAO = new ReceitaDAO();
+	 ingredientes.add(iDAO.buscarPorId(57).getId());
+	 ingredientes.add(iDAO.buscarPorId(32).getId());
+	 receitas = rDAO.buscarTodosPorIdIngrediente(ingredientes);
+	 for(int i=0;i<receitas.size();i++) {
+	  System.out.println(receitas.get(i).getNome());
+	 }
 	
 
 }
