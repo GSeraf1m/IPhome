@@ -17,7 +17,7 @@ public interface UsuarioIngredienteService {
     Call<UsuarioComida> cadastrar(@Body UsuarioComida ingrediente);
 
     @GET("usuario_ingrediente/listar/{id}")
-    Call<List<UsuarioComida>> listaIngredientesFav();
+    Call<List<UsuarioComida>> listaIngredientesFav(@Path("id") long id);
 
     @DELETE("usuario_ingrediente/{id}")
     Call<Void> excluir(@Path("id") long id);
