@@ -42,7 +42,7 @@
         app:layout_constraintTop_toTopOf="@+id/iv_barracadastro" />
 
     <EditText
-        android:id="@+id/et_usernamelogin"
+        android:id="@+id/et_emaillogin"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -50,9 +50,9 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="23dp"
         android:ems="10"
-        android:hint="@string/username"
-        android:textColorHint="@color/laranjaLetras"
+        android:hint="@string/emailLower"
         android:inputType="textPersonName"
+        android:textColorHint="@color/laranjaLetras"
         app:layout_constraintBottom_toTopOf="@+id/et_senhalogin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
