@@ -1,0 +1,34 @@
+2018-11-23 11:42:42,059 [Worker-5] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: org.springframework:compubras:0.1.0 @ E:\IPhome-ExpandablelistView\BackendServer\Iphome\pom.xml.
+2018-11-23 11:43:06,399 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-11-23 11:43:06,412 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-11-23 11:43:11,482 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-11-23 11:43:11,485 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-11-23 11:43:12,217 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\IPhome-ExpandablelistView\BackendServer\Iphome\src\test\resources
+2018-11-23 11:43:26,671 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-11-23 11:43:27,620 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-11-23 11:43:36,319 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-11-23 11:43:36,322 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-11-23 11:43:36,331 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\IPhome-ExpandablelistView\BackendServer\Iphome\src\test\resources
+2018-11-23 11:43:47,540 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-11-23 11:43:47,542 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-11-23 11:43:47,544 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-11-23 11:43:47,546 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-11-23 11:43:47,546 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\IPhome-ExpandablelistView\BackendServer\Iphome\src\test\resources
+2018-11-24 14:32:13,989 [Worker-2] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: org.springframework:compubras:0.1.0 @ E:\IPhome-ExpandablelistView\BackendServer\Iphome\pom.xml.
+2018-11-24 14:32:16,387 [Worker-8] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: org.springframework:compubras:0.1.0 @ E:\IPhome-ExpandablelistView\BackendServer\Iphome\pom.xml.
+2018-11-24 14:32:37,798 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-11-24 14:32:37,831 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-11-24 14:32:40,745 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-11-24 14:32:40,919 [Worker-10] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: org.springframework:compubras:0.1.0 @ E:\IPhome-ExpandablelistView\BackendServer\Iphome\pom.xml.
+2018-11-24 14:32:40,919 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-11-24 14:32:40,919 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\IPhome-ExpandablelistView\BackendServer\Iphome\src\test\resources
+2018-11-24 14:32:53,182 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-11-24 14:32:53,185 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-11-24 14:32:53,185 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-11-24 14:32:53,188 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-11-24 14:32:53,188 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\IPhome-ExpandablelistView\BackendServer\Iphome\src\test\resources
+2018-11-25 16:20:33,170 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-11-25 16:20:33,368 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-11-25 16:20:39,236 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-11-25 16:20:39,243 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-11-25 16:20:39,244 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\IPhome-ExpandablelistView\BackendServer\Iphome\src\test\resources

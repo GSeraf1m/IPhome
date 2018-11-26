@@ -19,5 +19,5 @@ public interface IngredienteService {
     Call<Ingrediente> buscarPorId(@Path("id") long id);
 
     @GET("ingrediente/categoria/{categoria}")
-    Call<Ingrediente> buscarTodosPorCategoria(@Path("categoria")String categoria);
+    Call<List<Ingrediente>> buscarTodosPorCategoria(@Path("categoria")String categoria);
 }

@@ -69,16 +69,35 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="12dp"
         android:ems="10"
         android:hint="@string/senha"
-        android:textColorHint="@color/laranjaLetras"
         android:inputType="textPassword"
+        android:textColorHint="@color/laranjaLetras"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_emailcadastro"
         app:layout_constraintVertical_bias="0.035" />
+
+    <EditText
+        android:id="@+id/et_confirmarsenha"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:hint="@string/confirmar"
+        android:inputType="textPassword"
+        android:textColorHint="@color/laranjaLetras"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_senhacadastro"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/bt_cadastrar"
@@ -105,14 +124,14 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="152dp"
         android:checked="true"
         android:text="@string/novidades"
         android:textColor="@color/laranjaLetras"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_senhacadastro"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/et_confirmarsenha" />
 
 </android.support.constraint.ConstraintLayout>

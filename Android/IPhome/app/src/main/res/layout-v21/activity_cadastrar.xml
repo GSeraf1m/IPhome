@@ -4,9 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/fundoAmarelo"
-    tools:context=".Activity.CadastrarActivity">
-
+    tools:context=".Activity.CadastrarActivity"
+    android:background="@color/fundoAmarelo">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbarCadastro"
@@ -24,10 +23,11 @@
         app:title="@string/cadastrarcaps"
         app:titleTextColor="@color/fundoAmarelo" />
 
+
     <EditText
         android:id="@+id/et_usernamecadastro"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="46dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
@@ -36,14 +36,12 @@
         android:hint="@string/username"
         android:textColorHint="@color/laranjaLetras"
         android:inputType="textPersonName"
-        android:backgroundTint="@color/laranjaLetras"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbarCadastro"
-        app:layout_constraintVertical_bias="0.054"
-        android:autofillHints="" />
+        app:layout_constraintVertical_bias="0.054" />
 
     <EditText
         android:id="@+id/et_emailcadastro"
@@ -56,15 +54,13 @@
         android:ems="10"
         android:hint="@string/emailLower"
         android:textColorHint="@color/laranjaLetras"
-        android:backgroundTint="@color/laranjaLetras"
         android:inputType="textEmailAddress"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_usernamecadastro"
-        app:layout_constraintVertical_bias="0.0"
-        android:autofillHints="" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/et_senhacadastro"
@@ -73,17 +69,35 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="12dp"
         android:ems="10"
         android:hint="@string/senha"
-        android:textColorHint="@color/laranjaLetras"
-        android:backgroundTint="@color/laranjaLetras"
         android:inputType="textPassword"
+        android:textColorHint="@color/laranjaLetras"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_emailcadastro"
         app:layout_constraintVertical_bias="0.035" />
+
+    <EditText
+        android:id="@+id/et_confirmarsenha"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:hint="@string/confirmar"
+        android:inputType="textPassword"
+        android:textColorHint="@color/laranjaLetras"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_senhacadastro"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/bt_cadastrar"
@@ -110,14 +124,14 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="152dp"
         android:checked="true"
         android:text="@string/novidades"
         android:textColor="@color/laranjaLetras"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_senhacadastro"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/et_confirmarsenha" />
 
 </android.support.constraint.ConstraintLayout>

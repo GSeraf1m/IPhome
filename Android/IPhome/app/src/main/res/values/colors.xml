@@ -8,4 +8,5 @@
     <color name="maisUmCinza">#7b7b7b</color>
     <color name="fundoAmarelo">#F8D18A</color>
     <color name="laranjaLetras">#CC5511</color>
+    <color name="transparente">#00ffffff</color>
 </resources>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_receita"
+            android:layout_height="wrap_content"
+            android:title="Buscar Receita"/>
+        <item
+            android:id="@+id/nav_perfil"
+            android:title="Perfil" />
+        <item
+            android:id="@+id/nav_salvas"
+            android:title="Receitas Salvas" />
+        <item
+            android:id="@+id/nav_sair"
+            android:title="Sair" />
+        <item
+            android:id="@+id/nav_creditos"
+            android:title="Créditos" />
+    </group>
+
+    <item android:title="Se comunique">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Compartilhe" />
+            <item
+                android:id="@+id/nav_avalie"
+                android:title="Nos avalie =)" />
+        </menu>
+    </item>
+
+</menu>
