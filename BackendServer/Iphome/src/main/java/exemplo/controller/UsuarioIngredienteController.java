@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import exemplo.model.Comida;
 import exemplo.model.UsuarioComida;
 import exemplo.repository.UsuarioIngredienteDAO;
 
@@ -30,11 +31,11 @@ public class UsuarioIngredienteController implements UsuarioComidaController{
 	}
 //---------------------------BUSCAR TODOS----------------------------------------------------------------------------------------
 	@RequestMapping(value = "listar/{id}", method = RequestMethod.GET)
-    public ResponseEntity<List<UsuarioComida>> listaIngredientesFav(@PathVariable long id) {
+    public ResponseEntity<List<Comida>> listaIngredientesFav(@PathVariable long id) {
 		
 		uiDAO = new UsuarioIngredienteDAO();
-		List<UsuarioComida> listaIngredientesFav = uiDAO.buscarTodosFavPorUsuario(id);		
-		return new ResponseEntity<List<UsuarioComida>>(listaIngredientesFav, HttpStatus.OK);
+		List<Comida> listaIngredientesFav = uiDAO.buscarTodosFavPorUsuario(id);		
+		return new ResponseEntity<List<Comida>>(listaIngredientesFav, HttpStatus.OK);
 	}
 //---------------------------EXCLUIR----------------------------------------------------------------------------------------------
 	@RequestMapping(value = "{id}", method = RequestMethod.DELETE)

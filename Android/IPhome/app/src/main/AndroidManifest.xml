@@ -37,7 +37,8 @@
         <activity
             android:name=".Activity.DrawerActivity"
             android:label="@string/title_activity_drawer"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

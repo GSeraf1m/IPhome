@@ -55,7 +55,7 @@ public class UsuarioDAO {
 			// ABRIR A CONEX�O COM O BANCO
 			this.conexao.abrirConexao();
 			// SQL COM A OPERA��O QUE DESEJA-SE REALIZAR
-			String sqlUpdate = "UPDATE usuario SET nome_usuario=?, email=?, senha=?, foto_usuario=? WHERE id_usuario=?;";
+			String sqlUpdate = "UPDATE usuario SET email=?, nome_usuario=?, senha=?, foto_usuario=? WHERE id_usuario=?;";
 
 			try {
 				// DECLARA E INICIALIZA UM STATEMENT, OBJETO USADO PARA PREPARAR O

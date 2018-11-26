@@ -21,8 +21,8 @@ public class ExpandableAdapter extends BaseExpandableListAdapter {
     private List<String> listCategoria;
     private HashMap<String,List<Ingrediente>> listIngrediente;
     private LayoutInflater inflater;
-    private HashMap<Integer, boolean[]> mChildCheckStates;
-    private HashMap<Integer, boolean[]> mChildCheckFavoritos;
+    public HashMap<Integer, boolean[]> mChildCheckStates;
+    public HashMap<Integer, boolean[]> mChildCheckFavoritos;
 
     public ExpandableAdapter(Context context, List<String> listCategoria, HashMap<String, List<Ingrediente>> listIngrediente) {
         this.listCategoria = listCategoria;

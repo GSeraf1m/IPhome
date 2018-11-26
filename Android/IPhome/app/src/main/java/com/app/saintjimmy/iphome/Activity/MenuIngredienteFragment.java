@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.ExpandableListView;
 import android.widget.ScrollView;
 import android.widget.TextView;
@@ -49,6 +50,9 @@ public class MenuIngredienteFragment extends Fragment {
     private int i;
     private List<Ingrediente> listaAuxiliar;
     private List<UsuarioComida> listaMaisAuxiliar;
+    private CheckBox cbSelecionar;
+    private List<Long> idIngredientesSelecionados;
+    private ExpandableAdapter eAdapter;
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -59,6 +63,9 @@ public class MenuIngredienteFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        Bundle bundle = this.getArguments();
+        usuario = (Usuario) bundle.getSerializable("usuario");
+        cbSelecionar = getView().findViewById(R.id.cbItem);
         tvSelecionar = getView().findViewById(R.id.tv_selecionar);
         btBuscarReceita = getView().findViewById(R.id.bt_buscarreceita);
         svIngredientes = getView().findViewById(R.id.sv_ingredientes);
@@ -70,8 +77,11 @@ public class MenuIngredienteFragment extends Fragment {
         serviceFavoritos = retrofit.create(UsuarioIngredienteService.class);
         listCategoria = new ArrayList<String>();
         listIngrediente = new HashMap<String, List<Ingrediente>>();
+        idIngredientesSelecionados = new ArrayList<>();
+
         lvCategoria = getView().findViewById(R.id.lv_categoria);
-        lvCategoria.setAdapter(new ExpandableAdapter(getContext(),listCategoria,listIngrediente));
+        eAdapter = new ExpandableAdapter(getContext(), listCategoria, listIngrediente);
+        lvCategoria.setAdapter(eAdapter);
 
         //Categoria
 //        listCategoria.add("Favoritos");
@@ -125,7 +135,7 @@ public class MenuIngredienteFragment extends Fragment {
         service.buscarTodosPorCategoria("Alcool").enqueue(new Callback<List<Ingrediente>>() {
             @Override
             public void onResponse(Call<List<Ingrediente>> call, Response<List<Ingrediente>> response) {
-                listaAuxiliar=response.body();
+                listaAuxiliar = response.body();
                 listIngrediente.put(listCategoria.get(0), listaAuxiliar);
             }
 
@@ -138,8 +148,8 @@ public class MenuIngredienteFragment extends Fragment {
         service.buscarTodosPorCategoria("Bebidas").enqueue(new Callback<List<Ingrediente>>() {
             @Override
             public void onResponse(Call<List<Ingrediente>> call, Response<List<Ingrediente>> response) {
-                listaAuxiliar=response.body();
-                listIngrediente.put(listCategoria.get(1),listaAuxiliar);
+                listaAuxiliar = response.body();
+                listIngrediente.put(listCategoria.get(1), listaAuxiliar);
             }
 
             @Override
@@ -151,8 +161,8 @@ public class MenuIngredienteFragment extends Fragment {
         service.buscarTodosPorCategoria(listCategoria.get(2)).enqueue(new Callback<List<Ingrediente>>() {
             @Override
             public void onResponse(Call<List<Ingrediente>> call, Response<List<Ingrediente>> response) {
-                listaAuxiliar=response.body();
-                listIngrediente.put(listCategoria.get(2),listaAuxiliar);
+                listaAuxiliar = response.body();
+                listIngrediente.put(listCategoria.get(2), listaAuxiliar);
             }
 
             @Override
@@ -164,8 +174,8 @@ public class MenuIngredienteFragment extends Fragment {
         service.buscarTodosPorCategoria(listCategoria.get(3)).enqueue(new Callback<List<Ingrediente>>() {
             @Override
             public void onResponse(Call<List<Ingrediente>> call, Response<List<Ingrediente>> response) {
-                listaAuxiliar=response.body();
-                listIngrediente.put(listCategoria.get(3),listaAuxiliar);
+                listaAuxiliar = response.body();
+                listIngrediente.put(listCategoria.get(3), listaAuxiliar);
             }
 
             @Override
@@ -177,8 +187,8 @@ public class MenuIngredienteFragment extends Fragment {
         service.buscarTodosPorCategoria(listCategoria.get(4)).enqueue(new Callback<List<Ingrediente>>() {
             @Override
             public void onResponse(Call<List<Ingrediente>> call, Response<List<Ingrediente>> response) {
-                listaAuxiliar=response.body();
-                listIngrediente.put(listCategoria.get(4),listaAuxiliar);
+                listaAuxiliar = response.body();
+                listIngrediente.put(listCategoria.get(4), listaAuxiliar);
             }
 
             @Override
@@ -190,8 +200,8 @@ public class MenuIngredienteFragment extends Fragment {
         service.buscarTodosPorCategoria(listCategoria.get(5)).enqueue(new Callback<List<Ingrediente>>() {
             @Override
             public void onResponse(Call<List<Ingrediente>> call, Response<List<Ingrediente>> response) {
-                listaAuxiliar=response.body();
-                listIngrediente.put(listCategoria.get(5),listaAuxiliar);
+                listaAuxiliar = response.body();
+                listIngrediente.put(listCategoria.get(5), listaAuxiliar);
             }
 
             @Override
@@ -203,8 +213,8 @@ public class MenuIngredienteFragment extends Fragment {
         service.buscarTodosPorCategoria(listCategoria.get(6)).enqueue(new Callback<List<Ingrediente>>() {
             @Override
             public void onResponse(Call<List<Ingrediente>> call, Response<List<Ingrediente>> response) {
-                listaAuxiliar=response.body();
-                listIngrediente.put(listCategoria.get(6),listaAuxiliar);
+                listaAuxiliar = response.body();
+                listIngrediente.put(listCategoria.get(6), listaAuxiliar);
             }
 
             @Override
@@ -216,8 +226,8 @@ public class MenuIngredienteFragment extends Fragment {
         service.buscarTodosPorCategoria(listCategoria.get(7)).enqueue(new Callback<List<Ingrediente>>() {
             @Override
             public void onResponse(Call<List<Ingrediente>> call, Response<List<Ingrediente>> response) {
-                listaAuxiliar=response.body();
-                listIngrediente.put(listCategoria.get(7),listaAuxiliar);
+                listaAuxiliar = response.body();
+                listIngrediente.put(listCategoria.get(7), listaAuxiliar);
             }
 
             @Override
@@ -229,8 +239,8 @@ public class MenuIngredienteFragment extends Fragment {
         service.buscarTodosPorCategoria(listCategoria.get(8)).enqueue(new Callback<List<Ingrediente>>() {
             @Override
             public void onResponse(Call<List<Ingrediente>> call, Response<List<Ingrediente>> response) {
-                listaAuxiliar=response.body();
-                listIngrediente.put(listCategoria.get(8),listaAuxiliar);
+                listaAuxiliar = response.body();
+                listIngrediente.put(listCategoria.get(8), listaAuxiliar);
             }
 
             @Override
@@ -242,8 +252,8 @@ public class MenuIngredienteFragment extends Fragment {
         service.buscarTodosPorCategoria(listCategoria.get(9)).enqueue(new Callback<List<Ingrediente>>() {
             @Override
             public void onResponse(Call<List<Ingrediente>> call, Response<List<Ingrediente>> response) {
-                listaAuxiliar=response.body();
-                listIngrediente.put(listCategoria.get(9),listaAuxiliar);
+                listaAuxiliar = response.body();
+                listIngrediente.put(listCategoria.get(9), listaAuxiliar);
             }
 
             @Override
@@ -255,8 +265,8 @@ public class MenuIngredienteFragment extends Fragment {
         service.buscarTodosPorCategoria(listCategoria.get(10)).enqueue(new Callback<List<Ingrediente>>() {
             @Override
             public void onResponse(Call<List<Ingrediente>> call, Response<List<Ingrediente>> response) {
-                listaAuxiliar=response.body();
-                listIngrediente.put(listCategoria.get(10),listaAuxiliar);
+                listaAuxiliar = response.body();
+                listIngrediente.put(listCategoria.get(10), listaAuxiliar);
             }
 
             @Override
@@ -268,8 +278,8 @@ public class MenuIngredienteFragment extends Fragment {
         service.buscarTodosPorCategoria(listCategoria.get(11)).enqueue(new Callback<List<Ingrediente>>() {
             @Override
             public void onResponse(Call<List<Ingrediente>> call, Response<List<Ingrediente>> response) {
-                listaAuxiliar=response.body();
-                listIngrediente.put(listCategoria.get(11),listaAuxiliar);
+                listaAuxiliar = response.body();
+                listIngrediente.put(listCategoria.get(11), listaAuxiliar);
             }
 
             @Override
@@ -281,8 +291,8 @@ public class MenuIngredienteFragment extends Fragment {
         service.buscarTodosPorCategoria(listCategoria.get(12)).enqueue(new Callback<List<Ingrediente>>() {
             @Override
             public void onResponse(Call<List<Ingrediente>> call, Response<List<Ingrediente>> response) {
-                listaAuxiliar=response.body();
-                listIngrediente.put(listCategoria.get(12),listaAuxiliar);
+                listaAuxiliar = response.body();
+                listIngrediente.put(listCategoria.get(12), listaAuxiliar);
             }
 
             @Override
@@ -294,8 +304,8 @@ public class MenuIngredienteFragment extends Fragment {
         service.buscarTodosPorCategoria(listCategoria.get(13)).enqueue(new Callback<List<Ingrediente>>() {
             @Override
             public void onResponse(Call<List<Ingrediente>> call, Response<List<Ingrediente>> response) {
-                listaAuxiliar=response.body();
-                listIngrediente.put(listCategoria.get(13),listaAuxiliar);
+                listaAuxiliar = response.body();
+                listIngrediente.put(listCategoria.get(13), listaAuxiliar);
             }
 
             @Override
@@ -307,8 +317,8 @@ public class MenuIngredienteFragment extends Fragment {
         service.buscarTodosPorCategoria(listCategoria.get(14)).enqueue(new Callback<List<Ingrediente>>() {
             @Override
             public void onResponse(Call<List<Ingrediente>> call, Response<List<Ingrediente>> response) {
-                listaAuxiliar=response.body();
-                listIngrediente.put(listCategoria.get(14),listaAuxiliar);
+                listaAuxiliar = response.body();
+                listIngrediente.put(listCategoria.get(14), listaAuxiliar);
             }
 
             @Override
@@ -347,10 +357,15 @@ public class MenuIngredienteFragment extends Fragment {
         lvCategoria.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
             @Override
             public boolean onChildClick(ExpandableListView expandableListView, View view, int i, int i1, long l) {
-                lvCategoria.setSelectedChild(i,i1,false);
-                return false;
+                lvCategoria.setSelectedChild(i, i1, false);
+                cbSelecionar = view.findViewById(R.id.cbItem);
+                if (cbSelecionar.isSelected()) {
+                    listIngrediente.get(i).get(i1).getId();
+                    Toast.makeText(getContext(), "Debug:" + listIngrediente.get(i).get(i1).getId(), Toast.LENGTH_SHORT).show();
+                }
+                return true;
             }
         });
-    }
 
+    }
 }

@@ -20,7 +20,7 @@
     <string name="IconeAnimal">Ícone Animalzinho</string>
     <string name="Resultados">Resultados</string>
     <string name="ReceitasFavoritas">Receitas Favoritas</string>
-    <string name="IP">"http://192.168.25.8:8080/"</string>
+    <string name="IP">"http://192.168.25.34:8080/"</string>
     <string name="Explicação">Olá, sejá muito bem vindo. Por favor, escolha alguns ingredientes dos quais você gostaria de fazer uma receita no dia de hoje, e iremos lhe mostrar algumas opções saborosas</string>
     <string name="fotousuario"></string>
     <string name="confirmar">Confirme sua senha</string>

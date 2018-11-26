@@ -1,7 +1,9 @@
 package com.app.saintjimmy.iphome.Services;
 
+import com.app.saintjimmy.iphome.Model.Ingrediente;
 import com.app.saintjimmy.iphome.Model.Receita;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;
@@ -21,5 +23,7 @@ public interface ReceitaService {
     Call<Receita> buscarPorId(@Path("id") long id);
 
     @POST("receita/listar/ingrediente/")
-    Call<List<Receita>> listaTodasReceitasPorIngrediente(@Body String categoria);
+    Call<List<Receita>> listaTodasReceitasPorIngrediente(@Body ArrayList<Ingrediente> ingredientes);
+
+
 }

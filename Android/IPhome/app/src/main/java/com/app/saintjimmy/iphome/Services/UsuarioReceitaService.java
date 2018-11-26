@@ -1,5 +1,6 @@
 package com.app.saintjimmy.iphome.Services;
 
+import com.app.saintjimmy.iphome.Model.Comida;
 import com.app.saintjimmy.iphome.Model.UsuarioComida;
 
 import java.util.List;
@@ -17,7 +18,7 @@ public interface UsuarioReceitaService {
     Call<UsuarioComida> cadastrar(@Body UsuarioComida ingrediente);
 
     @GET("usuario_receita/listar/{id}")
-    Call<List<UsuarioComida>> listaReceitasFav();
+    Call<List<Comida>> listaReceitasFav(@Path("id") long id);
 
     @DELETE("usuario_receita/{id}")
     Call<Void> excluir(@Path("id") long id);

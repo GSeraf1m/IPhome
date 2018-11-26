@@ -1,5 +1,6 @@
 package com.app.saintjimmy.iphome.Activity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -49,6 +50,7 @@ public class ContaFragment extends Fragment implements Validator.ValidationListe
     @ConfirmPassword
     private EditText etConfirmarConta;
     private Button btAtualizarConta;
+    private Button btExcluirConta;
     private ImageView ivIcone1, ivIcone2, ivIcone3, ivIcone4, ivIcone5, ivIcone6;
     private Toolbar toolbarConta;
     private Retrofit retrofit;
@@ -76,7 +78,9 @@ public class ContaFragment extends Fragment implements Validator.ValidationListe
         etUsernameConta = getView().findViewById(R.id.et_username_conta);
         etSenhaConta = getView().findViewById(R.id.et_senha_conta);
         btAtualizarConta = getView().findViewById(R.id.bt_atualizar_conta);
+        btExcluirConta = getView().findViewById(R.id.bt_excluir);
         etConfirmarConta = getView().findViewById(R.id.et_confirmareditar);
+        etEmailConta.setText(usuario.getEmail());
         etUsernameConta.setText(usuario.getNomeUsuario());
         etSenhaConta.setText(usuario.getSenha());
         etConfirmarConta.setText(usuario.getSenha());
@@ -90,6 +94,25 @@ public class ContaFragment extends Fragment implements Validator.ValidationListe
             @Override
             public void onClick(View view) {
                 validator.validate();
+            }
+        });
+        btExcluirConta.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+                builder.setCancelable(true);
+                builder.setTitle("EXCLUIR");
+                builder.setMessage("TEM CERTEZA QUE DESEJA DELETAR SUA CONTA?\nVAMOS FICAR MUITO TRISTES SEM SUA PRESENÇA");
+                builder.setPositiveButton("Confirmar", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        service.excluir(usuario.getIdUsuario());
+                        Intent it = new Intent(getContext(),MenuActivity.class);
+                        startActivity(it);
+                    }
+                });
+                AlertDialog  dialog = builder.create();
+                dialog.show();
             }
         });
     }
@@ -116,6 +139,8 @@ public class ContaFragment extends Fragment implements Validator.ValidationListe
                 usuario.setNomeUsuario(usuario2.getNomeUsuario());
                 usuario.setSenha(usuario2.getSenha());
                 usuario.setFotoUsuario(usuario2.getFotoUsuario());
+                Intent itPrincipal = new Intent(getActivity(), DrawerActivity.class);
+                itPrincipal.putExtra("usuario", usuario);
             }
 
             @Override

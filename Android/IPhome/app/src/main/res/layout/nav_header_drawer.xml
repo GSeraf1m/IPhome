@@ -17,13 +17,14 @@
         android:src="@drawable/ic_user"/>
 
     <TextView
+        android:id="@+id/tv_usernameDrawer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/username"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tv_emaildrawer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/emailLower" />

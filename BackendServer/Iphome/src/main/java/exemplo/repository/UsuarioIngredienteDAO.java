@@ -7,6 +7,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import exemplo.model.Comida;
 import exemplo.model.Ingrediente;
 import exemplo.model.Usuario;
 import exemplo.model.UsuarioComida;
@@ -56,29 +57,23 @@ public class UsuarioIngredienteDAO implements UsuarioComidaDAO{
 					}
 				}
 	//--------------------BUSCAR TODOS------------------------------------------------------------------------------------------
-				public List<UsuarioComida> buscarTodosFavPorUsuario(long idUsuario) {
+				public List<Comida> buscarTodosFavPorUsuario(long idUsuario) {
 					this.conexao.abrirConexao();
 					String sqlSelect = "SELECT * FROM usuario_ingrediente WHERE id_usuario=?;";
 					PreparedStatement statement;
-					UsuarioComida usuarioIngrediente = null;
-					List<UsuarioComida> listaIngredientesFav = new ArrayList<UsuarioComida>();
+					Ingrediente ingrediente = null;
+					List<Comida> listaIngredientesFav = new ArrayList<Comida>();
 					try {
 						statement = this.conexao.getConexao().prepareStatement(sqlSelect);
 						statement.setLong(1, idUsuario);
 						ResultSet rs = statement.executeQuery();
 						
 						while(rs.next()) {
-							usuarioIngrediente = new UsuarioComida();
-							usuarioIngrediente.setIdUsuarioComida(rs.getLong("id_usuario_ingrediente"));
-							
-							Usuario usuario = new Usuario();
-							usuario.setIdUsuario(rs.getLong("id_usuario"));
-							usuarioIngrediente.setIdUsuario(usuario.getIdUsuario());
-							
-							Ingrediente ingrediente = new Ingrediente();
+							ingrediente = new Ingrediente();
 							ingrediente.setId(rs.getLong("id_ingrediente"));
-							usuarioIngrediente.setIdComida(ingrediente.getId());
-							listaIngredientesFav.add(usuarioIngrediente);
+							ingrediente.setNome(rs.getString("nome_ingrediente"));
+							ingrediente.setCategoria(rs.getString("categoria"));
+							listaIngredientesFav.add(ingrediente);
 						}
 					} catch (SQLException e) {
 						e.printStackTrace();

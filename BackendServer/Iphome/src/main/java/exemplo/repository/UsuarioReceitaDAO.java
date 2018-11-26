@@ -7,6 +7,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import exemplo.model.Comida;
 import exemplo.model.Receita;
 import exemplo.model.Usuario;
 import exemplo.model.UsuarioComida;
@@ -55,29 +56,24 @@ private ConexaoMysql conexao;
 					}
 				}
 	//--------------------BUSCAR TODOS------------------------------------------------------------------------------------------
-				public List<UsuarioComida> buscarTodosFavPorUsuario(long idUsuario) {
+				public List<Comida> buscarTodosFavPorUsuario(long idUsuario) {
 					this.conexao.abrirConexao();
 					String sqlSelect = "SELECT * FROM usuario_receita WHERE id_usuario=?;";
 					PreparedStatement statement;
-					UsuarioComida usuarioReceita = null;
-					List<UsuarioComida> listaReceitasFav = new ArrayList<UsuarioComida>();
+					Receita receita = null;
+					List<Comida> listaReceitasFav = new ArrayList<Comida>();
 					try {
 						statement = this.conexao.getConexao().prepareStatement(sqlSelect);
 						statement.setLong(1, idUsuario);
 						ResultSet rs = statement.executeQuery();
 						
-						while(rs.next()) {
-							usuarioReceita = new UsuarioComida();
-							usuarioReceita.setIdUsuarioComida(rs.getLong("id_usuario_receita"));
-							
-							Usuario usuario = new Usuario();
-							usuario.setIdUsuario(rs.getLong("id_usuario"));
-							usuarioReceita.setIdUsuario(usuario.getIdUsuario());
-							
-							Receita receita = new Receita();
+						while(rs.next()) {							
+							receita = new Receita();
 							receita.setId(rs.getLong("id_receita"));
-							usuarioReceita.setIdComida(receita.getId());
-							listaReceitasFav.add(usuarioReceita);
+							receita.setNome(rs.getString("nome_receita"));
+							receita.setDescricaoReceita(rs.getString("descricao_receita"));
+							receita.setFotoReceita(rs.getString("foto_receita"));
+							listaReceitasFav.add(receita);
 						}
 					} catch (SQLException e) {
 						e.printStackTrace();
